@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fachriza Portofolio</title>
+        <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section id="about">
+            <div>
+                <div>
+                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+                            Hello!
+                            <br className="hidden lg:inline-block" />
+                        </h1>
+                        <p className="mb-8 leading-relaxed text-white">
+                            I'm Fachriza Ahmad Setiyono, you can call me Riza. I do virtual photography and I like graphics programming.
+                        </p>
+                    </div>
+                    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                        <img
+                            className="object-cover object-center rounded"
+                            alt="profile"
+                            src={profile}
+                        />
+                    </div>
+                </div>
+            </div>
+        </section >
+        <section id="hobby" className="text-gray-400 bg-gray-950 body-font">
+            <div className="container px-5 py-20 mx-auto text-center lg:px-40">
+                <div className="flex flex-col w-full mb-20">
+                    <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
+                        Virtual Photography
+                    </h1>
+                    <p className="mx-auto leading-relaxed text-base">
+                        I take pictures in Minecraft. I started around 2021 without any knowledge on
+                        photography beforehand.
+                    </p>
+                </div>
+                <div className="flex flex-col w-full my-2">
+                    <p className="mx-auto leading-relaxed text-xs sm:text-sm text-gray-500">
+                        Shots taken in cinematic aspect ratio (2.39:1)
+                    </p>
+                </div>
+                <div className="flex flex-col w-full mt-20">
+                    <p className="mx-auto leading-relaxed text-base lg:text-lg text-justify">
+                        I use shaders and textures that make use of
+                        <a href="https://en.wikipedia.org/wiki/Physically_based_rendering" className="text-green-500 hover:text-green-900"> Physically Based Rendering</a>
+                        <b> (PBR)</b> system, which allows realistic light behaviour within the game.
+                        This inspires me to delve deeper into graphics programming world,
+                        mainly focused on light transport.
+                    </p>
+                </div>
+                <div className="imageContainer relative container mx-auto mt-20 aspect-video">
+                    <img
+                        src={winner1}
+                        className="imageObject object-cover">
+
+                    </img>
+                </div>
+
+                <div className="flex flex-col w-full my-2">
+                    <p className="mx-auto leading-relaxed text-xs sm:text-sm text-gray-500">
+                        This shot wins me in my first ever screenshot contest!
+                    </p>
+                </div>
+                <div className="flex flex-col w-full mt-5 md:mt-10 pb-5 md:pb-10">
+                    <p className="mx-auto leading-relaxed text-base lg:text-lg text-justify">
+                        After a few days experimenting with my newfound hobby, I decided to join my first ever screenshot contest.
+                        And surprisingly, my shot got placed in top 3 based by voting!
+                    </p>
+                </div>
+                <div className="imageContainer relative container mx-auto mt-20 aspect-video">
+                    <img
+                        src={winner2}
+                        className="imageObject object-cover">
+
+                    </img>
+                </div>
+                <div className="flex flex-col w-full my-2">
+                    <p className="mx-auto leading-relaxed text-xs sm:text-sm text-gray-500">
+                        This one also wins me in my second contest!
+                    </p>
+                </div>
+                <div className="flex flex-col w-full mt-5 md:mt-10 pb-5 md:pb-10">
+                    <p className="mx-auto leading-relaxed text-base lg:text-lg text-justify">
+                        In my second contest, i tried to go very different than my usual style.
+                        I tried to capture an old-vintage look with the post processing.
+                        I'm so glad my shot got in top 3!
+                    </p>
+                </div>
+
+                <div className="imageContainer relative container mx-auto mt-20 aspect-video">
+                    <img
+                        src={winner3}
+                        className="imageObject object-cover">
+                    </img>
+                </div>
+
+                <div className="flex flex-col w-full my-2">
+                    <p className="mx-auto leading-relaxed text-xs sm:text-sm text-gray-500">
+                        And this one also wins me in my last contest!
+                    </p>
+                </div>
+                <div className="flex flex-col w-full mt-5 md:mt-10 ">
+                    <p className="mx-auto leading-relaxed text-base lg:text-lg text-justify">
+                        And finally in my latest contest, I managed to get the first place!
+                        The theme of the contest was like small room, and suddenly my mind
+                        just thought of an abandoned-apocalyptic kind of room. So i actually
+                        did build the room there on my own. It was really fun.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

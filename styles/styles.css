@@ -3,4 +3,78 @@ html {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+    color: white;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    padding-inline: 2.5rem;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.about-background {
+    width: 100%;
+    background-image: url('../assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.about-text {
+    align-items: start;
+    text-align: left;
+    margin-bottom: 16px;
+    width: 50%;
+    padding-right: 6rem;
+}
+
+.about-image {
+    flex: 1;
+    align-items: center;
+}
+
+.about-image > img {
+    display: block;
+    margin: auto;
+    max-width: 512px;
+}
+
+@media (width < 48rem) {
+
+    .about-text {
+        max-width: 70%;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-image > img {
+        width: 70%;
+    }
+
 }

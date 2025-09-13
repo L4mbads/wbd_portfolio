@@ -43,7 +43,7 @@ img {
   place-self: center;
 }
 
-.about {
+.hero {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -52,7 +52,7 @@ img {
   margin: 0;
 }
 
-.about-background {
+.hero-background {
   width: 100%;
   background-image: url("../assets/background.png");
   background-size: cover;
@@ -60,7 +60,7 @@ img {
   object-fit: cover;
 }
 
-.about-text {
+.hero-text {
   align-items: start;
   text-align: left;
   font-weight: 500;
@@ -69,7 +69,7 @@ img {
   padding-right: 2rem;
 }
 
-.about-text h1 {
+.hero-text h1 {
   width: fit-content;
   font-weight: bold;
   background-image: linear-gradient(
@@ -82,12 +82,12 @@ img {
   color: transparent;
 }
 
-.about-image {
+.hero-image {
   flex: 1;
   align-items: center;
 }
 
-.about-image > img {
+.hero-image > img {
   display: block;
   margin: auto;
   max-width: 512px;
@@ -189,22 +189,22 @@ ul.rb li .timestamp {
 }
 
 @media (width < 48rem) {
-  .about-text {
+  .hero-text {
     max-width: 70%;
     padding-right: 0;
     text-align: center;
     margin-block-end: 2rem;
   }
 
-  .about {
+  .hero {
     flex-direction: column;
   }
 
-  .about-text {
+  .hero-text {
     width: 100%;
   }
 
-  .about-text h1 {
+  .hero-text h1 {
     place-self: center;
     background-image: linear-gradient(
       45deg,
@@ -213,7 +213,7 @@ ul.rb li .timestamp {
     );
   }
 
-  .about-image > img {
+  .hero-image > img {
     width: 70%;
   }
   .rb-container ul.rb li {

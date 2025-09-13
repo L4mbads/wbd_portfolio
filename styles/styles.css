@@ -1,80 +1,195 @@
-html {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    color: white;
+:root {
+  --color-primary: white;
+  --color-secondary: #030712;
+  --color-accent: #1cb952;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
+html {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    font-size: 36px;
+  padding: 0;
+  margin: 0;
+  font-size: 36px;
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .container {
-    padding-inline: 2.5rem;
+  padding: 2.5rem;
+  max-width: 650px;
+  margin: 50px auto;
+  position: relative;
+  box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5);
+}
+
+.part {
+  padding: 10px;
+  max-width: 1600px;
+  place-self: center;
 }
 
 .about {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 2.5rem;
 }
 
 .about-background {
-    width: 100%;
-    background-image: url('../assets/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
+  width: 100%;
+  background-image: url("../assets/background.png");
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
 }
 
 .about-text {
-    align-items: start;
-    text-align: left;
-    margin-bottom: 16px;
-    width: 50%;
-    padding-right: 6rem;
+  align-items: start;
+  text-align: left;
+  font-weight: 500;
+  margin-bottom: 16px;
+  width: 50%;
+  padding-right: 6rem;
+}
+
+.about-text h1 {
+  width: fit-content;
+  font-weight: bold;
+  background-image: linear-gradient(90deg, rgb(7, 174, 234) 0%, rgb(43, 245, 152) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .about-image {
-    flex: 1;
-    align-items: center;
+  flex: 1;
+  align-items: center;
 }
 
 .about-image > img {
-    display: block;
-    margin: auto;
-    max-width: 512px;
+  display: block;
+  margin: auto;
+  max-width: 512px;
+}
+
+#experience {
+  background-color: var(--color-secondary);
+}
+
+.experience > h1 {
+  text-align: center;
+}
+
+.rb-container {
+  margin: auto;
+  display: block;
+  position: relative;
+  max-width: 1260px;
+}
+
+.rb-container ul.rb {
+  margin: 2.5em 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.rb-container ul.rb li {
+  list-style: none;
+  margin: auto;
+  margin-inline: 10em;
+  min-height: 50px;
+  border-left: 1px dashed #fff;
+  padding: 0 0 50px 30px;
+  position: relative;
+}
+
+.rb-container ul.rb li:last-child {
+  border-left: 0;
+}
+
+.rb-container ul.rb li::before {
+  position: absolute;
+  left: -18px;
+  top: -5px;
+  content: " ";
+  border: 8px solid rgba(255, 255, 255, 1);
+  border-radius: 500%;
+  background: var(--color-accent);
+  height: 20px;
+  width: 20px;
+  transition: all 100ms ease-in-out;
+}
+
+.rb-container ul.rb li:hover::before {
+  border-color: var(--color-accent);
+  background: var(--color-primary);
+  transition: all 100ms ease-in-out;
+}
+
+ul.rb li .timestamp {
+  color: var(--color-accent);
+  position: relative;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+.item-title {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0;
+}
+
+.item-description {
+  font-size: 12px;
+}
+
+.hobby {
+  background-color: var(--color-primary);
 }
 
 @media (width < 48rem) {
+  .about-text {
+    max-width: 70%;
+    padding-right: 0;
+    text-align: center;
+    margin-block-end: 2rem;
+  }
 
-    .about-text {
-        max-width: 70%;
-        padding-right: 0;
-        text-align: center;
-    }
+  .about {
+    flex-direction: column;
+  }
 
-    .about {
-        flex-direction: column;
-    }
+  .about-text {
+    width: 100%;
+  }
 
-    .about-text {
-        width: 100%;
-    }
+  .about-text h1 {
+    place-self: center;
+  background-image: linear-gradient(45deg, rgb(0, 0, 100) 0%, rgb(0, 40, 18) 50%);
+  }
 
-    .about-image > img {
-        width: 70%;
-    }
-
+  .about-image > img {
+    width: 70%;
+  }
+  .rb-container ul.rb li {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 }

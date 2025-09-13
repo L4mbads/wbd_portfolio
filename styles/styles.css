@@ -48,6 +48,8 @@ img {
   align-items: center;
   flex-direction: row;
   padding: 2.5rem;
+  padding-top: 4rem;
+  margin: 0;
 }
 
 .about-background {
@@ -64,13 +66,17 @@ img {
   font-weight: 500;
   margin-bottom: 16px;
   width: 50%;
-  padding-right: 6rem;
+  padding-right: 2rem;
 }
 
 .about-text h1 {
   width: fit-content;
   font-weight: bold;
-  background-image: linear-gradient(90deg, rgb(7, 174, 234) 0%, rgb(43, 245, 152) 100%);
+  background-image: linear-gradient(
+    90deg,
+    rgb(7, 174, 234) 0%,
+    rgb(43, 245, 152) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -93,6 +99,8 @@ img {
 
 .experience > h1 {
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .rb-container {
@@ -116,22 +124,30 @@ img {
   border-left: 1px dashed #fff;
   padding: 0 0 50px 30px;
   position: relative;
+
+  .item-title,
+  .item-description {
+    margin-left: 0px;
+    margin-right: 5px;
+    transition: all 100ms ease-in;
+  }
 }
 
 .rb-container ul.rb li:last-child {
   border-left: 0;
+  padding: 0 0 50px 30px;
 }
 
 .rb-container ul.rb li::before {
   position: absolute;
-  left: -18px;
+  left: -13px;
   top: -5px;
   content: " ";
-  border: 8px solid rgba(255, 255, 255, 1);
+  border: 8px solid var(--color-primary);
   border-radius: 500%;
   background: var(--color-accent);
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   transition: all 100ms ease-in-out;
 }
 
@@ -139,6 +155,15 @@ img {
   border-color: var(--color-accent);
   background: var(--color-primary);
   transition: all 100ms ease-in-out;
+}
+
+.rb-container ul.rb li:hover {
+  .item-title,
+  .item-description {
+    margin-right: 0px;
+    margin-left: 5px;
+    transition: all 100ms ease-in;
+  }
 }
 
 ul.rb li .timestamp {
@@ -153,7 +178,6 @@ ul.rb li .timestamp {
 .item-title {
   font-weight: 500;
   font-size: 14px;
-  margin: 0;
 }
 
 .item-description {
@@ -161,7 +185,7 @@ ul.rb li .timestamp {
 }
 
 .hobby {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 
 @media (width < 48rem) {
@@ -182,7 +206,11 @@ ul.rb li .timestamp {
 
   .about-text h1 {
     place-self: center;
-  background-image: linear-gradient(45deg, rgb(0, 0, 100) 0%, rgb(0, 40, 18) 50%);
+    background-image: linear-gradient(
+      45deg,
+      rgb(0, 0, 100) 0%,
+      rgb(0, 40, 18) 50%
+    );
   }
 
   .about-image > img {
@@ -191,5 +219,96 @@ ul.rb li .timestamp {
   .rb-container ul.rb li {
     margin-left: 1em;
     margin-right: 1em;
+  }
+}
+.nav {
+  height: fit-content;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
   }
 }

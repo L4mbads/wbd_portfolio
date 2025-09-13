@@ -11,6 +11,25 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <navbar class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+            </div>
+            <div class="nav-btn">
+              <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+
+            <div class="nav-links">
+              <a href="#about">About</a>
+              <a href="#experience">Experience</a>
+              <a href="#project">Project</a>
+              <a href="#contact">Contact</a>
+            </div>
+        </navbar>
         <section id="about">
             <div class="about-background">
                 <div class="about part">
@@ -19,7 +38,7 @@
                             Hello!
                             <br/>
                         </h1>
-                        <p className="mb-8 leading-relaxed text-white">
+                        <p>
                             I'm Fachriza Ahmad Setiyono, you can call me Riza. I like graphics programming.
                         </p>
                     </div>
@@ -49,7 +68,7 @@
                                     ITB Programming Laboratory Assistant
                                 </h2>
                                 <p class="item-description">
-                                   Manage projects and curriculum related to Algorithm & Data Structure, Object Oriented Programming, Web Development, Mobile Development.
+                                   Manage projects and curriculum related to Algorithm & Data Structure, Object Oriented Programming, Web Development, and Mobile Development.
                                 </p>
                             </li>
                             <li class="rb-item">
@@ -63,90 +82,100 @@
                                     Worked collaboratively on a web based visual novel game for Dikpus and minigame for OSKM with responsive design.
                                 </p>
                             </li>
+                            <li class="rb-item">
+                                <div class="timestamp">
+                                    August 2024 - September 2024
+                                </div>
+                                <h2 class="item-title">
+                                    Eduplore - Fullstack Developer
+                                </h2>
+                                <p class="item-description">
+                                    Worked collaboratively on a web based visual novel game for Dikpus and minigame for OSKM with responsive design.
+                                </p>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
         <section id="hobby">
-            <!-- <div className="container px-5 py-20 mx-auto text-center lg:px-40"> -->
             <div class="container hobby px-5 py-20 mx-auto text-center lg:px-40">
-                <div className="flex flex-col w-full mb-20">
-                    <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
+                <div>
+                    <h1>
                         Virtual Photography
                     </h1>
-                    <p className="mx-auto leading-relaxed text-base">
+                    <p>
                         I take pictures in Minecraft. I started around 2021 without any knowledge on
                         photography beforehand.
                     </p>
                 </div>
-                <div className="flex flex-col w-full my-2">
-                    <p className="mx-auto leading-relaxed text-xs sm:text-sm text-gray-500">
+                <div>
+                    <p>
                         Shots taken in cinematic aspect ratio (2.39:1)
                     </p>
                 </div>
-                <div className="flex flex-col w-full mt-20">
-                    <p className="mx-auto leading-relaxed text-base lg:text-lg text-justify">
+                <div>
+                    <p>
                         I use shaders and textures that make use of
-                        <a href="https://en.wikipedia.org/wiki/Physically_based_rendering" className="text-green-500 hover:text-green-900"> Physically Based Rendering</a>
+                        <a href="https://en.wikipedia.org/wiki/Physically_based_rendering"> Physically Based Rendering</a>
                         <b> (PBR)</b> system, which allows realistic light behaviour within the game.
                         This inspires me to delve deeper into graphics programming world,
                         mainly focused on light transport.
                     </p>
                 </div>
-                <div className="imageContainer relative container mx-auto mt-20 aspect-video">
+                <div>
                     <img
                         src={winner1}
-                        className="imageObject object-cover">
+                       >
 
                     </img>
                 </div>
 
-                <div className="flex flex-col w-full my-2">
-                    <p className="mx-auto leading-relaxed text-xs sm:text-sm text-gray-500">
+                <div>
+                    <p>
                         This shot wins me in my first ever screenshot contest!
                     </p>
                 </div>
-                <div className="flex flex-col w-full mt-5 md:mt-10 pb-5 md:pb-10">
-                    <p className="mx-auto leading-relaxed text-base lg:text-lg text-justify">
+                <div>
+                    <p>
                         After a few days experimenting with my newfound hobby, I decided to join my first ever screenshot contest.
                         And surprisingly, my shot got placed in top 3 based by voting!
                     </p>
                 </div>
-                <div className="imageContainer relative container mx-auto mt-20 aspect-video">
+                <div>
                     <img
                         src={winner2}
-                        className="imageObject object-cover">
+                       >
 
                     </img>
                 </div>
-                <div className="flex flex-col w-full my-2">
-                    <p className="mx-auto leading-relaxed text-xs sm:text-sm text-gray-500">
+                <div>
+                    <p>
                         This one also wins me in my second contest!
                     </p>
                 </div>
-                <div className="flex flex-col w-full mt-5 md:mt-10 pb-5 md:pb-10">
-                    <p className="mx-auto leading-relaxed text-base lg:text-lg text-justify">
+                <div>
+                    <p>
                         In my second contest, i tried to go very different than my usual style.
                         I tried to capture an old-vintage look with the post processing.
                         I'm so glad my shot got in top 3!
                     </p>
                 </div>
 
-                <div className="imageContainer relative container mx-auto mt-20 aspect-video">
+                <div>
                     <img
                         src={winner3}
-                        className="imageObject object-cover">
+                       >
                     </img>
                 </div>
 
-                <div className="flex flex-col w-full my-2">
-                    <p className="mx-auto leading-relaxed text-xs sm:text-sm text-gray-500">
+                <div>
+                    <p>
                         And this one also wins me in my last contest!
                     </p>
                 </div>
-                <div className="flex flex-col w-full mt-5 md:mt-10 ">
-                    <p className="mx-auto leading-relaxed text-base lg:text-lg text-justify">
+                <div>
+                    <p>
                         And finally in my latest contest, I managed to get the first place!
                         The theme of the contest was like small room, and suddenly my mind
                         just thought of an abandoned-apocalyptic kind of room. So i actually

@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     </head>
     <body>
         <navbar class="nav">
@@ -26,8 +27,9 @@
             <div class="nav-links">
               <a href="#">About</a>
               <a href="#experience">Experience</a>
-              <a href="#project">Project</a>
+              <a href="#projects">Projects</a>
               <a href="#contact">Contact</a>
+              <a href="https://l4mbads.github.io/blog">Blog</a>
             </div>
         </navbar>
         <section id="hero">
@@ -38,9 +40,9 @@
                             Hello!
                             <br/>
                         </h1>
-                        <p>
+                        <h2>
                             I'm Fachriza Ahmad Setiyono, you can call me Riza. I like graphics programming.
-                        </p>
+                        </h2>
                     </div>
                     <div class="hero-image">
                         <img
@@ -54,7 +56,7 @@
         </section>
         <section id="experience">
             <div class="part experience">
-                <h1>
+                <h1 class="title">
                     Experience
                 </h1>
                 <div class="rightbox">
@@ -87,10 +89,10 @@
                                     August 2024 - September 2024
                                 </div>
                                 <h2 class="item-title">
-                                    Eduplore - Fullstack Developer
+                                    Eduplore - Lead & Fullstack Developer
                                 </h2>
                                 <p class="item-description">
-                                    Worked collaboratively on a web based visual novel game for Dikpus and minigame for OSKM with responsive design.
+                                    Created a MERN (MongoDB, Express, React, Node.js) web application for SPARTA 2023 in a team of 11 members as lead programmer.
                                 </p>
                             </li>
                         </ul>
@@ -98,91 +100,113 @@
                 </div>
             </div>
         </section>
-        <section id="hobby">
-            <div class="part hobby px-5 py-20 mx-auto text-center lg:px-40">
-                <div>
-                    <h1>
-                        Virtual Photography
-                    </h1>
-                    <p>
-                        I take pictures in Minecraft. I started around 2021 without any knowledge on
-                        photography beforehand.
-                    </p>
+        <section id="projects">
+            <div class="part projects">
+                <h1 class="title">
+                    Projects
+                </h1>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-image-container">
+                          <img
+                            src="https://raw.githubusercontent.com/L4mbads/grocademy-monolith/29e9a0ff044e88e7317e681f696e67e5782ce751/assets/Screenshot%202025-08-25%20005008.png"
+                          />
+                        </div>
+                        <div class="card-content">
+                            <div class="card-identity">
+                                <h2 class="card-title">
+                                    Grocademy
+                                </h2>
+                                <a href="https:github.com/l4mbads/grocademy-monolith" target="_blank">
+                                    <span class="material-symbols-outlined">
+                                        folder_code
+                                    </span>
+                                </a>
+                            </div>
+                          <p class="card-description">
+                            Web monolith for ITB Programming Lab selection. Built with Go and Gin framework.
+                          </p>
+                          <ul class="card-info">
+                            <li class="card-tag">Web</li>
+                            <li class="card-tag">HTML & CSS</li>
+                            <li class="card-tag">Go</li>
+                          </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image-container">
+                          <img
+                            src="assets/eduplore.png"
+                          />
+                        </div>
+                        <div class="card-content">
+                            <div class="card-identity">
+                                <h2 class="card-title">
+                                    Eduplore
+                                </h2>
+                                <a href="https:github.com/l4mbads/8_Eduplore" target="_blank">
+                                    <span class="material-symbols-outlined">
+                                        folder_code
+                                    </span>
+                                </a>
+                            </div>
+                          <p class="card-description">
+                            MERN Web application to help students find scholarships. Built for SPARTA 2023.
+                          </p>
+                          <ul class="card-info">
+                            <li class="card-tag">Web</li>
+                            <li class="card-tag">React</li>
+                            <li class="card-tag">Express</li>
+                            <li class="card-tag">MongoDB</li>
+                            <li class="card-tag">Node.js</li>
+                          </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image-container">
+                          <img
+                            src="https://img.itch.zone/aW1nLzE0OTE5NzIwLnBuZw==/315x250%23c/1adUCQ.png"
+                          />
+                        </div>
+                        <div class="card-content">
+                            <div class="card-identity">
+                                <h2 class="card-title">
+                                    Democrussy
+                                </h2>
+                                <a href="https://l4mbads.itch.io/democrussy" target="_blank">
+                                    <span class="material-symbols-outlined">
+                                        link
+                                    </span>
+                                </a>
+                            </div>
+                          <p class="card-description">
+                            GIMJAM 2024 Best Overall & Best Visual. A strategy-card game mixed with some visual novel element to better narrate its epic storyline. Built with Unity engine.
+                          </p>
+                          <ul class="card-info">
+                            <li class="card-tag">Game</li>
+                            <li class="card-tag">Unity</li>
+                            <li class="card-tag">C#</li>
+                          </ul>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p>
-                        Shots taken in cinematic aspect ratio (2.39:1)
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        I use shaders and textures that make use of
-                        <a href="https://en.wikipedia.org/wiki/Physically_based_rendering"> Physically Based Rendering</a>
-                        <b> (PBR)</b> system, which allows realistic light behaviour within the game.
-                        This inspires me to delve deeper into graphics programming world,
-                        mainly focused on light transport.
-                    </p>
-                </div>
-                <div>
-                    <img
-                        src={winner1}
-                       >
-
-                    </img>
-                </div>
-
-                <div>
-                    <p>
-                        This shot wins me in my first ever screenshot contest!
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        After a few days experimenting with my newfound hobby, I decided to join my first ever screenshot contest.
-                        And surprisingly, my shot got placed in top 3 based by voting!
-                    </p>
-                </div>
-                <div>
-                    <img
-                        src={winner2}
-                       >
-
-                    </img>
-                </div>
-                <div>
-                    <p>
-                        This one also wins me in my second contest!
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        In my second contest, i tried to go very different than my usual style.
-                        I tried to capture an old-vintage look with the post processing.
-                        I'm so glad my shot got in top 3!
-                    </p>
-                </div>
-
-                <div>
-                    <img
-                        src={winner3}
-                       >
-                    </img>
-                </div>
-
-                <div>
-                    <p>
-                        And this one also wins me in my last contest!
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        And finally in my latest contest, I managed to get the first place!
-                        The theme of the contest was like small room, and suddenly my mind
-                        just thought of an abandoned-apocalyptic kind of room. So i actually
-                        did build the room there on my own. It was really fun.
-                    </p>
-                </div>
+                <p class="projects-more">
+                    See more on my <a href="https://www.github.com/L4mbads?tab=repositories" target="_blank">Github</a>.
+                </p>
             </div>
         </section>
+        <section id="contact">
+            <div class="part">
+                <h1 class="title">
+                    Contact
+                </h1>
+                <p>
+                    Contact me at <a href="mailto://rizacal.mamen@gmail.com">rizacal.mamen@gmail.com</a>
+                </p>
+            </div>
+        </section>
+        <footer>
+            © 2025 Fachriza Ahmad Setiyono
+        </footer>
     </body>
 </html>

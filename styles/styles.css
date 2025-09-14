@@ -38,7 +38,6 @@ img {
   height: auto;
 }
 
-
 a:link,
 a:visited {
   color: var(--color-accent2);
@@ -124,7 +123,7 @@ a:hover {
   background-color: var(--color-secondary);
 }
 
-.part > .title {
+.part > header > .title {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -298,7 +297,7 @@ ul.rb li .timestamp {
 }
 
 .nav > .nav-links > a:hover {
-  color: var(--color-detail)
+  color: var(--color-detail);
 }
 
 .nav > #nav-check {

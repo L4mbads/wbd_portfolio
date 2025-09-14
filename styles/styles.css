@@ -38,6 +38,7 @@ img {
   height: auto;
 }
 
+
 a:link,
 a:visited {
   color: var(--color-accent2);
@@ -147,7 +148,7 @@ a:hover {
   margin: auto;
   margin-inline: 10em;
   min-height: 50px;
-  border-left: 1px dashed #fff;
+  border-left: 1px solid #fff;
   padding: 0 0 50px 30px;
   position: relative;
 
@@ -160,7 +161,9 @@ a:hover {
 }
 
 .rb-container ul.rb li:last-child {
-  border-left: 0;
+  border-image: linear-gradient(to bottom, #fff, #000000) 1;
+  border-left-width: 1px;
+  border-left-style: solid;
   padding: 0 0 50px 30px;
 }
 
@@ -289,13 +292,13 @@ ul.rb li .timestamp {
 
 .nav > .nav-links > a {
   display: inline-block;
-  padding: 13px 10px 13px 10px;
+  padding: 13px 20px 13px 0px;
   text-decoration: none;
-  color: #efefef;
+  color: var(--color-primary);
 }
 
 .nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--color-detail)
 }
 
 .nav > #nav-check {
@@ -316,9 +319,7 @@ ul.rb li .timestamp {
     height: 50px;
     padding: 13px;
   }
-  /* .nav > .nav-btn > label:hover,
-  .nav #nav-check:checked ~ .nav-btn > label {
-  } */
+
   .nav > .nav-btn > label > span {
     display: block;
     width: 25px;
@@ -332,18 +333,23 @@ ul.rb li .timestamp {
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
+    overflow-x: hidden;
     top: 50px;
-    left: 0px;
+    right: 0px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
   }
   .nav > .nav-links > a {
     display: block;
     width: 100%;
+    padding-left: 10px;
   }
   .nav > #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
   }
   .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
+    height: fit-content;
+    width: fit-content;
     overflow-y: auto;
   }
 }
@@ -360,9 +366,8 @@ ul.rb li .timestamp {
   flex-direction: column;
   background-color: var(--color-tertiary);
   transition: all 0.3s ease 0s;
-  border-radius: 36px;
   overflow: hidden;
-  position: relative;
+  border-radius: 1.75rem;
 }
 
 .card:hover {

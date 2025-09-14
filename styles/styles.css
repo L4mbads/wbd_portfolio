@@ -75,7 +75,7 @@ a:hover {
 
 .hero-background {
   width: 100%;
-  background-image: url("../assets/background.png");
+  background-image: url("../assets/hero.webp");
   background-size: cover;
   background-position: center;
   object-fit: cover;
